@@ -7,3 +7,6 @@ __pycache__/
 
 # Ignorar os relatórios gerados pelo seu sistema
 *.csv
+
+# ABRIR EXCEÇÃO: Não ignore o arquivo de exemplo dentro da pasta data
+!data/exemplo_relatorio.csv

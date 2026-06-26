@@ -1,4 +1,3 @@
-import csv
 class Estufa:
     def __init__(self):
         self.pracas = []
@@ -37,16 +36,3 @@ class Estufa:
         print(f"Peso total: {pesoTotal}")
         print("=========================\n")
     
-    def exportar_csv(self):
-        with open('relatorio_estufa.csv', 'w', newline='', encoding='utf-8') as arquivo:
-            writer = csv.writer(arquivo)
-            writer.writerow(['Praça', 'Prato', 'Qtd Atual', 'Reposições', 'Saídas', 'Peso Total'])
-            for praca in self.pracas:
-                for prato in praca.pratos:
-                    writer.writerow([
-                        praca.nome,
-                        prato.nome,
-                        prato.qtAtual,
-                        prato.reposicoes,
-                        prato.saidas,
-                        prato.pesoTotal])

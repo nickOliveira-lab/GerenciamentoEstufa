@@ -1,6 +1,7 @@
 from models.estufa import Estufa
 from models.praca import Praca
 from models.prato import Prato
+from services.exportar_csv import ExportadorService
 
 # Inicializa o objeto central do sistema
 estufa = Estufa()
@@ -88,7 +89,7 @@ while True:
     elif acao == 5: #FECHANDO O SISTEMA
 
         estufa.resumo()
-        estufa.exportar_csv()
+        ExportadorService.para_csv(estufa)
 
         break
 
